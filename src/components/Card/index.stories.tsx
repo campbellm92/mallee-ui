@@ -20,7 +20,7 @@ const meta = {
         "outline-primary",
         "outline-secondary",
         "outline-tertiary",
-        "",
+        "with-image",
       ],
       control: { type: "radio" },
       description: "Defines the style variant of the card.",
@@ -82,6 +82,15 @@ export const OutlineSecondary = {
 export const OutlineTertiary = {
   args: {
     variant: "outline-tertiary",
+    title: "Card Title",
+    content: "This is basic card content. Add more details here.",
+  },
+};
+
+export const WithImage = {
+  args: {
+    image: <img src="https://via.placeholder.com/500" alt="Example Image" />,
+    variant: "with-image",
     title: "Card Title",
     content: "This is basic card content. Add more details here.",
   },
