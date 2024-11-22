@@ -10,6 +10,7 @@
   padding: 1rem;
   border-radius: 2px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
+  text-wrap: pretty;
 }
 
 @media (max-width: 768px) {
@@ -73,4 +74,13 @@
   background-color: none;
   border: 3px solid var(--tertiary);
   color: var(--text-secondary);
+}
+
+.card-with-image {
+  border: 3px solid var(--primary);
+  color: var(--text-secondary);
+}
+
+img {
+  border-radius: 2px;
 }
