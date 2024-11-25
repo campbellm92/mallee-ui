@@ -2,6 +2,7 @@ import { Card } from "./index";
 const meta = {
   title: "Components/Card",
   component: Card,
+  tags: ["autodocs"],
   parameters: {
     layout: "centered",
     docs: {
@@ -44,54 +45,112 @@ export default meta;
 export const Primary = {
   args: {
     variant: "primary",
-    title: "Card Title",
-    content:
-      "This is basic card content. Add more details here. What happens if I just put more and more and more and more and more and more and more and more and more and more and more and more and more and more kjsfdjsdjfsdfsdfsdffsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf",
+    children: (
+      <>
+        <Card.Title>
+          <h2>Card Title</h2>
+        </Card.Title>
+        <Card.Content>
+          <p> This is basic card content. Add more details here.</p>
+        </Card.Content>
+      </>
+    ),
   },
 };
+
 export const Secondary = {
   args: {
     variant: "secondary",
-    title: "Card Title",
-    content: "This is basic card content. Add more details here.",
+    children: (
+      <>
+        <Card.Title>
+          <h2>Card Title</h2>
+        </Card.Title>
+        <Card.Content>
+          <p> This is basic card content. Add more details here.</p>
+        </Card.Content>
+      </>
+    ),
   },
 };
+
 export const Tertiary = {
   args: {
     variant: "tertiary",
-    title: "Card Title",
-    content: "This is basic card content. Add more details here.",
+    children: (
+      <>
+        <Card.Title>
+          <h2>Card Title</h2>
+        </Card.Title>
+        <Card.Content>
+          <p> This is basic card content. Add more details here.</p>
+        </Card.Content>
+      </>
+    ),
   },
 };
+
 export const OutlinePrimary = {
   args: {
     variant: "outline-primary",
-    title: "Card Title",
-    content: "This is basic card content. Add more details here.",
+    children: (
+      <>
+        <Card.Title>
+          <h2>Card Title</h2>
+        </Card.Title>
+        <Card.Content>
+          <p> This is basic card content. Add more details here.</p>
+        </Card.Content>
+      </>
+    ),
   },
 };
 
 export const OutlineSecondary = {
   args: {
     variant: "outline-secondary",
-    title: "Card Title",
-    content: "This is basic card content. Add more details here.",
+    children: (
+      <>
+        <Card.Title>
+          <h2>Card Title</h2>
+        </Card.Title>
+        <Card.Content>
+          <p> This is basic card content. Add more details here.</p>
+        </Card.Content>
+      </>
+    ),
   },
 };
 
 export const OutlineTertiary = {
   args: {
     variant: "outline-tertiary",
-    title: "Card Title",
-    content: "This is basic card content. Add more details here.",
+    children: (
+      <>
+        <Card.Title>
+          <h2>Card Title</h2>
+        </Card.Title>
+        <Card.Content>
+          <p> This is basic card content. Add more details here.</p>
+        </Card.Content>
+      </>
+    ),
   },
 };
 
 export const WithImage = {
   args: {
-    image: <img src="https://via.placeholder.com/500" alt="Example Image" />,
     variant: "with-image",
-    title: "Card Title",
-    content: "This is basic card content. Add more details here.",
+    children: (
+      <>
+        <Card.Image src="https://via.placeholder.com/250" alt="Example Image" />
+        <Card.Title>
+          <h2>Card Title</h2>
+        </Card.Title>
+        <Card.Content>
+          <p> This is basic card content. Add more details here.</p>
+        </Card.Content>
+      </>
+    ),
   },
 };
