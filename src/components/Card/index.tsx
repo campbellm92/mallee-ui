@@ -11,24 +11,31 @@ type CardProps = ComponentProps<"div"> & {
     | "outline-tertiary"
     | "with-image";
   image?: React.ReactNode;
-  title?: string;
-  content?: string | React.ReactNode;
 };
 
 export const Card = ({
   variant = "primary",
-  image,
-  title,
-  content,
+
+  children,
   ...props
 }: CardProps) => {
   const className = [styles.card, styles[`card-${variant}`]].join(" ");
 
   return (
     <div {...props} className={className}>
-      {image && <div className={styles.cardImage}>{image}</div>}
-      {title && <div className={styles.cardTitle}>{title}</div>}
-      {content && <div className={styles.cardContent}>{content}</div>}
+      {children}
     </div>
   );
 };
+
+Card.Title = ({ children }: { children: React.ReactNode }) => (
+  <div className={styles.cardTitle}>{children}</div>
+);
+
+Card.Content = ({ children }: { children: React.ReactNode }) => (
+  <div className={styles.cardContent}>{children}</div>
+);
+
+Card.Image = ({ src, alt }: { src: string; alt: string }) => (
+  <img className={styles.cardImage} src={src} alt={alt} />
+);
