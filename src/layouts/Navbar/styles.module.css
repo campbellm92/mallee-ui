@@ -1,0 +1,52 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 1rem;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.navbar .logo {
+  margin-right: 1rem;
+  color: var(--text-primary);
+  font-weight: 800;
+}
+
+/* Variant-specific styles */
+.navbar-basic {
+  justify-content: flex-end;
+}
+
+.navbar-with-branding {
+  justify-content: space-between;
+}
+
+.navbar-with-branding-sticky {
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-with-branding-sticky-fade {
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-with-branding-sticky-fade.scrolled {
+  background-color: rgba(66, 70, 140, 0.9);
+}
