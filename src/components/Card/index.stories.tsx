@@ -1,4 +1,6 @@
 import { Card } from "./index";
+import ParrotImage from "../../assets/parrot.jpg";
+
 const meta = {
   title: "Components/Card",
   component: Card,
@@ -29,6 +31,10 @@ const meta = {
     image: {
       control: { type: "text" },
       description: "An image or React node to display in the card.",
+    },
+    alt: {
+      control: { type: "text" },
+      description: "Alt text for the image.",
     },
     title: {
       control: { type: "text" },
@@ -143,7 +149,7 @@ export const WithImage = {
     variant: "with-image",
     children: (
       <>
-        <Card.Image src="https://via.placeholder.com/250" alt="Example Image" />
+        <Card.Image src={ParrotImage} alt="Parrot" />
         <Card.Title>
           <h2>Card Title</h2>
         </Card.Title>
