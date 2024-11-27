@@ -1,8 +1,29 @@
 {
   "name": "mallee-ui",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "A UI library built with TypeScript, React and CSS Modules.",
   "type": "module",
+  "keywords": [
+    "ui-library",
+    "typescript",
+    "react",
+    "storybook",
+    "css-modules",
+    "mallee",
+    "ui",
+    "react-ui",
+    "components",
+    "components-library"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/campbellm92/mallee-ui"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=17.0.0 <19.0.0",
+    "react-dom": ">=17.0.0 <19.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
