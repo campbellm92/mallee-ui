@@ -4,32 +4,27 @@
   align-items: center;
   flex-direction: column;
   width: 300px;
-  max-width: 200px;
+  max-width: 400px;
   height: auto;
   min-height: 400px;
-  line-height: 1.5;
   border-radius: 4px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  text-wrap: pretty;
   overflow: hidden;
-  overflow-wrap: break-word;
   word-wrap: break-word;
   white-space: pre-wrap;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .card {
     max-width: 95%;
-    padding: 12px;
   }
 }
 
 @media (min-width: 1024px) {
   .card {
     max-width: 500px;
-    padding: 24px;
   }
-}
+} */
 
 .card:hover {
   transform: scale(1.015);
@@ -37,7 +32,6 @@
 
 .cardTitle {
   font-weight: 700;
-  margin-bottom: 0.5rem;
 }
 
 .cardContent {
@@ -62,33 +56,43 @@
 }
 
 .card-outline-primary {
-  background-color: inherit;
+  background-color: transparent;
   border: 3px solid var(--primary);
   color: var(--text-secondary);
 }
 
 .card-outline-secondary {
-  background-color: none;
+  background-color: transparent;
   border: 3px solid var(--secondary);
   color: var(--text-secondary);
 }
 
 .card-outline-tertiary {
-  background-color: none;
+  background-color: transparent;
   border: 3px solid var(--tertiary);
   color: var(--text-secondary);
 }
 
 .card-with-image {
+  display: flex;
+  flex-direction: column;
   border: 3px solid var(--primary);
   color: var(--text-secondary);
 }
 
+.cardImageContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  /* Remove height: auto; */
+}
+
 .cardImage {
-  width: 100%; /* fully fill the card width */
-  max-width: calc(100% - 2rem); /* account for padding */
-  height: auto; /* maintain aspect ratio */
-  object-fit: cover; /* avoid distortion */
-  border-radius: 2px;
-  margin-top: 0;
+  /* Remove position: absolute; */
+  width: 100%;
+  height: auto; /* Or set a specific height if needed */
+  object-fit: cover;
+  display: block;
 }
