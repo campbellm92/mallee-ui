@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "A UI library built with TypeScript, React and CSS Modules.",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
@@ -13,7 +13,7 @@
     }
   },
   "files": [
-    "dist",
+    "dist/**/*",
     "src/**/*.css"
   ],
   "keywords": [
@@ -40,8 +40,8 @@
   "scripts": {
     "dev": "vite --config vite.playground.config.ts",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
+    "lint": "eslint .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepublishOnly": "npm run build"
