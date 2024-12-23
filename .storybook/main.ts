@@ -1,6 +1,7 @@
 import type { StorybookConfig } from "@storybook/react-vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import path from "path";
+import { mergeConfig } from "vite";
+import svgr from "@svgr/rollup";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -14,17 +15,12 @@ const config: StorybookConfig = {
     name: "@storybook/react-vite",
     options: {},
   },
-  viteFinal: async (config) => {
-    config.plugins?.push(
-      tsconfigPaths({
-        projects: [path.resolve(path.dirname(__dirname), "tsconfig.app.json")],
-      })
-    );
+  viteFinal: async (configFromStorybook) => {
+    configFromStorybook.plugins?.push(tsconfigPaths());
 
-    return {
-      ...config,
+    return mergeConfig(configFromStorybook, {
+      plugins: [svgr()],
       css: {
-        ...config.css,
         preprocessorOptions: {
           css: {
             charset: false,
@@ -36,7 +32,7 @@ const config: StorybookConfig = {
           globalModulePaths: [/global\.css$/],
         },
       },
-    };
+    });
   },
 };
 
