@@ -1,10 +1,11 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { libInjectCss } from "vite-plugin-lib-inject-css";
+import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), libInjectCss()],
+  plugins: [react(), libInjectCss(), svgr()],
   css: {
     modules: {
       localsConvention: "camelCase",
