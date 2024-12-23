@@ -1,7 +1,8 @@
 {
   "files": [],
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+    { "path": "./tsconfig.app.json" }
+    // remove node config - only needed for SSR
+    // { "path": "./tsconfig.node.json" }
   ]
 }
