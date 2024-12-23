@@ -20,7 +20,6 @@
     "declaration": true, // generate .d.ts (type definition files for autocomplete and type-checking)
     "emitDeclarationOnly": true, // avoids redundant output of js files (handled by vite)
     "declarationDir": "./dist", // controls where .d.ts files are saved (here: dist)
-    "outDir": "./dist",
 
     /* Linting */
     "strict": true,
