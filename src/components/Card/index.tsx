@@ -31,16 +31,22 @@ export const Card = ({
   );
 };
 
-Card.Image = ({ src, alt }: { src: string; alt: string }) => (
+const CardImage = ({ src, alt }: { src: string; alt: string }) => (
   <div className={styles.cardImageContainer}>
     <img className={styles.cardImage} src={src} alt={alt} />
   </div>
 );
 
-Card.Title = ({ children }: { children: React.ReactNode }) => (
+const CardTitle = ({ children }: { children: React.ReactNode }) => (
   <div className={styles.cardTitle}>{children}</div>
 );
 
-Card.Content = ({ children }: { children: React.ReactNode }) => (
+const CardContent = ({ children }: { children: React.ReactNode }) => (
   <div className={styles.cardContent}>{children}</div>
 );
+
+Card.Image = CardImage;
+Card.Title = CardTitle;
+Card.Content = CardContent;
+
+export default Card;
