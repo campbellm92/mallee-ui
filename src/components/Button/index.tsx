@@ -1,6 +1,12 @@
 import { ComponentProps } from "react";
 import styles from "./styles.module.css";
 
+//consider:
+// adding a style prop for inline styling
+// allowing icons w/ an icon prop
+// making variant and size extensible
+// ARIA
+
 type ButtonProps = ComponentProps<"button"> & {
   variant?:
     | "primary"
