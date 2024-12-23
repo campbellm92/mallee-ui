@@ -1,5 +1,8 @@
+import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { Footer } from "./index";
+import { ReactComponent as MalleeLogo } from "../../assets/logo.svg";
+import { ReactComponent as GithubLogo } from "../../assets/github-mark.svg";
 
 const meta: Meta<typeof Footer> = {
   title: "Layouts/Footer",
@@ -17,8 +20,13 @@ const meta: Meta<typeof Footer> = {
       description: "An array of footer navigation items with label and href.",
     },
     logo: {
-      control: { type: "text" },
+      control: { type: "object" },
       description: "A logo or branding element.",
+    },
+    iconLinks: {
+      control: { type: "object" },
+      description:
+        "An array of footer logos, like for Github or LinkedIn links.",
     },
   },
 };
@@ -29,9 +37,15 @@ type Story = StoryObj<typeof meta>;
 
 export const Minimal: Story = {
   args: {
-    footerItems: [
-      { label: "About", href: "/about" },
-      { label: "Contact", href: "/contact" },
+    variant: "minimal",
+    logo: <MalleeLogo />,
+    children: <span>© 2024 Mallee UI. All rights reserved.</span>,
+    iconLinks: [
+      {
+        icon: <GithubLogo />,
+        href: "https://github.com",
+        alt: "Github",
+      },
     ],
   },
 };
