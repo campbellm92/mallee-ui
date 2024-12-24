@@ -1,3 +1,4 @@
+import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { Button } from "./index";
 
@@ -12,14 +13,11 @@ const meta: Meta<typeof Button> = {
     // various configurations for the component that you see in storybook
     variant: {
       control: { type: "select" },
-      options: [
-        "primary",
-        "secondary",
-        "tertiary",
-        "outline-primary",
-        "outline-secondary",
-        "outline-tertiary",
-      ], // choose the button type
+      options: ["filled", "outline"], // choose the button type
+    },
+    color: {
+      control: { type: "select" },
+      options: ["primary", "secondary", "tertiary"],
     },
     size: {
       control: { type: "select" },
@@ -35,65 +33,69 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    children: "Primary", // Default label
-    variant: "primary", // Default variant
-    size: "medium", // Default size
-    isLoading: false, // Default loading state
+    variant: "filled",
+    color: "primary",
+    size: "large",
+    children: "Button",
   },
 };
 
-export const Secondary: Story = {
+export const FilledButtons: Story = {
   args: {
-    children: "Secondary",
-    variant: "secondary",
     size: "medium",
-    isLoading: false,
+  },
+  render: (args) => {
+    const colors = ["primary", "secondary", "tertiary"] as const;
+    return (
+      <div style={{ display: "flex", gap: "1rem" }}>
+        {colors.map((color) => (
+          <Button key={color} variant="filled" color={color} size={args.size}>
+            {color.charAt(0).toUpperCase() + color.slice(1)}
+          </Button>
+        ))}
+      </div>
+    );
   },
 };
 
-export const Tertiary: Story = {
+export const OutlineButtons: Story = {
   args: {
-    children: "Tertiary",
-    variant: "tertiary",
     size: "medium",
-    isLoading: false,
+  },
+  render: (args) => {
+    const colors = ["primary", "secondary", "tertiary"] as const;
+    return (
+      <div style={{ display: "flex", gap: "1rem" }}>
+        {colors.map((color) => (
+          <Button key={color} variant="outline" color={color} size={args.size}>
+            {color.charAt(0).toUpperCase() + color.slice(1)}
+          </Button>
+        ))}
+      </div>
+    );
   },
 };
 
-export const OutlinePrimary: Story = {
-  args: {
-    children: "Outline Primary",
-    variant: "outline-primary",
-    size: "medium",
-    isLoading: false,
-  },
-};
-
-export const OutlineSecondary: Story = {
-  args: {
-    children: "Outline Secondary",
-    variant: "outline-secondary",
-    size: "medium",
-    isLoading: false,
-  },
-};
-
-export const OutlineTertiary: Story = {
-  args: {
-    children: "Outline Tertiary",
-    variant: "outline-tertiary",
-    size: "medium",
-    isLoading: false,
-  },
+export const StateButtons = () => {
+  const colors = ["info", "success", "warning", "error"] as const;
+  return (
+    <div style={{ display: "flex", gap: "1rem" }}>
+      {colors.map((color) => (
+        <Button key={color} variant="filled" color={color}>
+          {color.charAt(0).toUpperCase() + color.slice(1)}
+        </Button>
+      ))}
+    </div>
+  );
 };
 
 export const Loading: Story = {
   args: {
     children: "Loading...",
-    variant: "primary",
+    color: "primary",
     size: "medium",
-    isLoading: true, // Shows a loading spinner
+    isLoading: true, // shows a loading spinner -- not coded yet
   },
 };
