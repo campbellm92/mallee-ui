@@ -3,16 +3,23 @@
 :root {
   /* Colour */
   --primary: #42468c;
+  --primary-hover: rgba(66, 70, 140, 0.9);
   --secondary: #8c4246;
+  --secondary-hover: rgba(140, 66, 70, 0.9);
   --tertiary: #468c42;
+  --tertiary-hover: rgba(70, 140, 66, 0.9);
   --text-primary: #f3f4f6;
   --text-secondary: #111827;
   --bg-dark: #111827;
   --bg-light: #f3f4f6;
   --info: #0ea5e9;
-  --warning: #eab308;
-  --error: #f43f5e;
+  --info-hover: rgba(14, 165, 233, 0.9);
   --success: #10b981;
+  --success-hover: rgba(16, 185, 129, 0.9);
+  --warning: #eab308;
+  --warning-hover: rgba(234, 179, 8, 0.9);
+  --error: #f43f5e;
+  --error-hover: rgba(244, 63, 94, 0.9);
 
   /* Typography */
   --font-family: "Rubik", sans-serif;
