@@ -8,27 +8,31 @@ import styles from "./styles.module.css";
 // ARIA
 
 type ButtonProps = ComponentProps<"button"> & {
-  variant?:
+  variant?: "filled" | "outline";
+  color?:
     | "primary"
     | "secondary"
     | "tertiary"
-    | "outline-primary"
-    | "outline-secondary"
-    | "outline-tertiary";
+    | "info"
+    | "success"
+    | "warning"
+    | "error";
   size?: "small" | "medium" | "large";
   isLoading?: boolean;
 };
 
 export const Button = ({
-  variant = "primary",
+  variant = "filled",
+  color = "primary",
   size = "medium",
   isLoading = false,
   ...props
 }: ButtonProps) => {
   const className = [
     styles.button,
-    styles[`button-${variant}`], // would look like 'button-primary' for example
-    styles[`button-${size}`], // would look like 'button-small' for example
+    styles[`button-${variant}`],
+    styles[`button-${color}`],
+    styles[`button-${size}`],
     props.className, // allow additional custom classes
   ]
     .filter(Boolean) // remove any undefined or falsy values
