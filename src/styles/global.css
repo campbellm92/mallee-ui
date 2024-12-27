@@ -8,6 +8,8 @@
   --secondary-hover: rgba(140, 66, 70, 0.9);
   --tertiary: #468c42;
   --tertiary-hover: rgba(70, 140, 66, 0.9);
+  --neutral: rgb(229, 229, 229);
+  --neutral-hover: rgb(229, 229, 229, 0.9);
   --text-primary: #f3f4f6;
   --text-secondary: #111827;
   --bg-dark: #111827;
