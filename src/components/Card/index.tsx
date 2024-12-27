@@ -2,24 +2,24 @@ import { ComponentProps } from "react";
 import styles from "./styles.module.css";
 
 type CardProps = ComponentProps<"div"> & {
-  variant?:
-    | "primary"
-    | "secondary"
-    | "tertiary"
-    | "outline-primary"
-    | "outline-secondary"
-    | "outline-tertiary"
-    | "with-image";
+  variant?: "filled" | "outline" | "with-image";
+  color?: "primary" | "secondary" | "tertiary";
   image?: React.ReactNode;
 };
 
 export const Card = ({
-  variant = "primary",
+  variant = "filled",
+  color = "primary",
   image,
   children,
   ...props
 }: CardProps) => {
-  const className = [styles.card, styles[`card-${variant}`]]
+  const className = [
+    styles.card,
+    styles[`card-${variant}`],
+    styles[`card-${color}`],
+    props.className,
+  ]
     .filter(Boolean)
     .join(" ");
 

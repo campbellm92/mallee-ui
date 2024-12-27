@@ -1,7 +1,9 @@
+import React from "react";
 import { Card } from "./index";
+import { Meta, StoryObj } from "@storybook/react";
 import ParrotImage from "../../assets/parrot.jpg";
 
-const meta = {
+const meta: Meta<typeof Card> = {
   title: "Components/Card",
   component: Card,
   tags: ["autodocs"],
@@ -16,17 +18,13 @@ const meta = {
   },
   argTypes: {
     variant: {
-      options: [
-        "primary",
-        "secondary",
-        "tertiary",
-        "outline-primary",
-        "outline-secondary",
-        "outline-tertiary",
-        "with-image",
-      ],
-      control: { type: "radio" },
+      options: ["filled", "outline", "with-image"],
+      control: { type: "select" },
       description: "Defines the style variant of the card.",
+    },
+    color: {
+      control: { type: "select" },
+      options: ["primary", "secondary", "tertiary"],
     },
     image: {
       control: { type: "text" },
@@ -48,99 +46,66 @@ const meta = {
 };
 export default meta;
 
-export const Primary = {
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
   args: {
-    variant: "primary",
+    variant: "filled",
+    color: "primary",
     children: (
       <>
         <Card.Title>
           <h2>Card Title</h2>
         </Card.Title>
         <Card.Content>
-          <p> This is basic card content. Add more details here.</p>
+          <p>This is the card content.</p>
         </Card.Content>
       </>
     ),
   },
 };
 
-export const Secondary = {
-  args: {
-    variant: "secondary",
-    children: (
-      <>
-        <Card.Title>
-          <h2>Card Title</h2>
-        </Card.Title>
-        <Card.Content>
-          <p> This is basic card content. Add more details here.</p>
-        </Card.Content>
-      </>
-    ),
+export const FilledCards: Story = {
+  render: () => {
+    const colors = ["primary", "secondary", "tertiary"] as const;
+    return (
+      <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+        {colors.map((color) => (
+          <Card key={color} variant="filled" color={color}>
+            <Card.Title>
+              <h2>{`${color.charAt(0).toUpperCase()}${color.slice(
+                1
+              )} Card`}</h2>
+            </Card.Title>
+            <Card.Content>
+              <p>This is a {color} filled card.</p>
+            </Card.Content>
+          </Card>
+        ))}
+      </div>
+    );
   },
 };
 
-export const Tertiary = {
-  args: {
-    variant: "tertiary",
-    children: (
-      <>
-        <Card.Title>
-          <h2>Card Title</h2>
-        </Card.Title>
-        <Card.Content>
-          <p> This is basic card content. Add more details here.</p>
-        </Card.Content>
-      </>
-    ),
-  },
-};
-
-export const OutlinePrimary = {
-  args: {
-    variant: "outline-primary",
-    children: (
-      <>
-        <Card.Title>
-          <h2>Card Title</h2>
-        </Card.Title>
-        <Card.Content>
-          <p> This is basic card content. Add more details here.</p>
-        </Card.Content>
-      </>
-    ),
-  },
-};
-
-export const OutlineSecondary = {
-  args: {
-    variant: "outline-secondary",
-    children: (
-      <>
-        <Card.Title>
-          <h2>Card Title</h2>
-        </Card.Title>
-        <Card.Content>
-          <p> This is basic card content. Add more details here.</p>
-        </Card.Content>
-      </>
-    ),
-  },
-};
-
-export const OutlineTertiary = {
-  args: {
-    variant: "outline-tertiary",
-    children: (
-      <>
-        <Card.Title>
-          <h2>Card Title</h2>
-        </Card.Title>
-        <Card.Content>
-          <p> This is basic card content. Add more details here.</p>
-        </Card.Content>
-      </>
-    ),
+export const OutlineCards: Story = {
+  render: () => {
+    const colors = ["primary", "secondary", "tertiary"] as const;
+    return (
+      <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+        {colors.map((color) => (
+          <Card key={color} variant="outline" color={color}>
+            <Card.Title>
+              <h2>{`${color.charAt(0).toUpperCase()}${color.slice(
+                1
+              )} Card`}</h2>
+            </Card.Title>
+            <Card.Content>
+              <p>This is a {color} filled card.</p>
+            </Card.Content>
+          </Card>
+        ))}
+      </div>
+    );
   },
 };
 
