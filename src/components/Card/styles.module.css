@@ -27,7 +27,7 @@
 } */
 
 .card:hover {
-  transform: scale(1.015);
+  transform: scale(1.03);
 }
 
 .cardTitle {
@@ -40,34 +40,36 @@
   margin-top: 0;
 }
 
-.card-primary {
+/* Filled cards */
+.card-filled.card-primary {
   background-color: var(--primary);
   color: var(--text-primary);
 }
 
-.card-secondary {
+.card-filled.card-secondary {
   background-color: var(--secondary);
   color: var(--text-primary);
 }
 
-.card-tertiary {
+.card-filled.card-tertiary {
   background-color: var(--tertiary);
   color: var(--text-primary);
 }
 
-.card-outline-primary {
+/* Outline cards */
+.card-outline.card-primary {
   background-color: transparent;
   border: 3px solid var(--primary);
   color: var(--text-secondary);
 }
 
-.card-outline-secondary {
+.card-outline.card-secondary {
   background-color: transparent;
   border: 3px solid var(--secondary);
   color: var(--text-secondary);
 }
 
-.card-outline-tertiary {
+.card-outline.card-tertiary {
   background-color: transparent;
   border: 3px solid var(--tertiary);
   color: var(--text-secondary);
