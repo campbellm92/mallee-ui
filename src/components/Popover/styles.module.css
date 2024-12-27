@@ -1,0 +1,62 @@
+.popover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 2px;
+  z-index: 1000;
+  text-wrap: wrap;
+}
+
+.popoverContent {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.popover-basic {
+  width: 300px;
+  min-height: 150px;
+}
+
+.popover-basic.popover-primary {
+  background-color: var(--primary);
+  color: var(--text-primary);
+  min-width: 300px;
+  min-height: 150px;
+}
+
+.popover-basic.popover-secondary {
+  background-color: var(--secondary);
+  color: var(--text-primary);
+  min-width: 300px;
+  min-height: 150px;
+}
+
+.popover-basic.popover-tertiary {
+  background-color: var(--tertiary);
+  color: var(--text-primary);
+  min-width: 300px;
+  min-height: 150px;
+}
+
+.popover-basic.popover-neutral {
+  background-color: var(--neutral);
+  color: var(--text-secondary);
+  min-width: 300px;
+  min-height: 150px;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px;
+}
