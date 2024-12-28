@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Popover } from "./index";
+import { Button } from "../Button/index";
 import React, { useState } from "react";
 
 const meta: Meta<typeof Popover> = {
@@ -31,11 +32,13 @@ export const ControlledPopover: Story = {
 
     return (
       <div>
-        <button onClick={() => setIsOpen((prev) => !prev)}>
+        <Button onClick={() => setIsOpen((prev) => !prev)}>
           Toggle Popover
-        </button>
+        </Button>
         <Popover {...args} isOpen={isOpen} onClose={() => setIsOpen(false)}>
-          Glass. A substance used to make things like glasses, windows, etc.
+          <h2> Glass. </h2>
+          <p>A substance used to make things like glasses, windows, etc.</p>
+          <Button size="small">Save word</Button>
         </Popover>
       </div>
     );
