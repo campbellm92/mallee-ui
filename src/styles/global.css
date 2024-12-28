@@ -62,26 +62,32 @@ p {
 
 h1 {
   font-size: var(--font-size-h1);
+  margin: 0;
 }
 
 h2 {
   font-size: var(--font-size-h2);
+  margin: 0;
 }
 
 h3 {
   font-size: var(--font-size-h3);
+  margin: 0;
 }
 
 h4 {
   font-size: var(--font-size-h4);
+  margin: 0;
 }
 
 h5 {
   font-size: var(--font-size-h5);
+  margin: 0;
 }
 
 h6 {
   font-size: var(--font-size-h6);
+  margin: 0;
 }
 
 small,
