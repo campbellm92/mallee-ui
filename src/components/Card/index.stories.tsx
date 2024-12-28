@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "./index";
+// import { Button } from "../Button/index";
 import { Meta, StoryObj } from "@storybook/react";
 import ParrotImage from "../../assets/parrot.jpg";
 
@@ -101,6 +102,43 @@ export const OutlineCards: Story = {
             </Card.Title>
             <Card.Content>
               <p>This is a {color} filled card.</p>
+            </Card.Content>
+          </Card>
+        ))}
+      </div>
+    );
+  },
+};
+
+export const WidthCards: Story = {
+  render: () => {
+    const colors = ["primary", "secondary", "tertiary"] as const;
+    return (
+      <div
+        style={{
+          display: "flex",
+          gap: "0.5rem",
+          flexWrap: "wrap",
+          flexDirection: "column",
+        }}
+      >
+        {colors.map((color) => (
+          <Card key={color} variant="wide" color={color}>
+            {/* <Card.Title>
+              <h2>{`${color.charAt(0).toUpperCase()}${color.slice(
+                1
+              )} Card`}</h2>
+            </Card.Title> */}
+            <Card.Content>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                dolorem quo cumque sequi repellat qui architecto nisi quos
+                inventore culpa a ipsum natus maxime fugit, possimus, quia
+                doloribus hic adipisci. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Vitae dolorem quo cumque sequi repellat qui
+                architecto nisi quos inventore culpa a ipsum natus maxime fugit,
+                possimus, quia doloribus hic adipisci.
+              </p>
             </Card.Content>
           </Card>
         ))}
