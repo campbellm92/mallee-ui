@@ -2,7 +2,7 @@ import { ComponentProps } from "react";
 import styles from "./styles.module.css";
 
 type CardProps = ComponentProps<"div"> & {
-  variant?: "filled" | "outline" | "with-image";
+  variant?: "filled" | "outline" | "with-image" | "wide";
   color?: "primary" | "secondary" | "tertiary";
   image?: React.ReactNode;
 };
