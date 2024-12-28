@@ -47,28 +47,30 @@ export const Popover = ({
 
   return (
     <div className={className} role="dialog" ref={reference} {...props}>
-      <br />
-      <button
-        onClick={onClose}
-        aria-label="Close popover"
-        className={styles.closeButton}
-        style={closeButtonColor}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className={styles.icon}
+      <div className={styles.closeButtonContainer}>
+        <button
+          onClick={onClose}
+          aria-label="Close popover"
+          className={styles.closeButton}
+          style={closeButtonColor}
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M6 18 18 6M6 6l12 12"
-          />
-        </svg>
-      </button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className={styles.icon}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
       <div className={styles.popoverContent}>{children}</div>
     </div>
   );
