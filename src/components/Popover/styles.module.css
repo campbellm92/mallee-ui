@@ -10,7 +10,7 @@
 
 .popoverContent {
   text-align: center;
-  padding: 2rem 1rem 1rem;
+  padding: 2rem;
 }
 
 .popover-basic {
@@ -46,6 +46,15 @@
   min-height: 150px;
 }
 
+/* Close button */
+
+.closeButtonContainer {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  padding-top: 4px;
+}
+
 .icon {
   width: 1.5rem;
   height: 1.5rem;
@@ -55,8 +64,4 @@
   background: none;
   border: none;
   cursor: pointer;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 4px;
 }
