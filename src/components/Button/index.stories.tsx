@@ -5,10 +5,10 @@ import { Button } from "./index";
 const meta: Meta<typeof Button> = {
   title: "Components/Button", // category of the component
   component: Button, // name of the component
+  tags: ["autodocs"], // automatic documentation
   parameters: {
     layout: "centered", // centers in preview
   },
-  tags: ["autodocs"], // automatic documentation
   argTypes: {
     // various configurations for the component that you see in storybook
     variant: {
