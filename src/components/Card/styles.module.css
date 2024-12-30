@@ -22,7 +22,7 @@
   }
 } */
 
-.card:hover {
+.card-hover-enabled:hover {
   transform: scale(1.03);
 }
 
