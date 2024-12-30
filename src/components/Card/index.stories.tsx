@@ -35,6 +35,10 @@ const meta: Meta<typeof Card> = {
       control: { type: "text" },
       description: "Alt text for the image.",
     },
+    enableHoverEffect: {
+      control: { type: "boolean" },
+      description: "Enable or disable the hover scale effect.",
+    },
     title: {
       control: { type: "text" },
       description: "The title text of the card.",
@@ -53,6 +57,7 @@ export const Default: Story = {
   args: {
     variant: "filled",
     color: "primary",
+    enableHoverEffect: true,
     children: (
       <>
         <Card.Title>
@@ -111,6 +116,10 @@ export const OutlineCards: Story = {
 };
 
 export const WidthCards: Story = {
+  args: {
+    enableHoverEffect: true,
+  },
+
   render: () => {
     const colors = ["primary", "secondary", "tertiary"] as const;
     return (
@@ -123,21 +132,20 @@ export const WidthCards: Story = {
         }}
       >
         {colors.map((color) => (
-          <Card key={color} variant="wide" color={color}>
-            {/* <Card.Title>
+          <Card
+            key={color}
+            variant="wide"
+            color={color}
+            enableHoverEffect={false}
+          >
+            <Card.Title>
               <h2>{`${color.charAt(0).toUpperCase()}${color.slice(
                 1
               )} Card`}</h2>
-            </Card.Title> */}
+            </Card.Title>
             <Card.Content>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                dolorem quo cumque sequi repellat qui architecto nisi quos
-                inventore culpa a ipsum natus maxime fugit, possimus, quia
-                doloribus hic adipisci. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Vitae dolorem quo cumque sequi repellat qui
-                architecto nisi quos inventore culpa a ipsum natus maxime fugit,
-                possimus, quia doloribus hic adipisci.
+                <p>This is a {color} filled width card.</p>
               </p>
             </Card.Content>
           </Card>
