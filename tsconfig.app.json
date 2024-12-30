@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2020",
     "useDefineForClassFields": true,
@@ -28,7 +27,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "src/types"],
+  "include": ["src", "src/types", "src/index.tsx"],
   "exclude": [
     "node_modules",
     "dist",
