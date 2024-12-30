@@ -1,5 +1,5 @@
-# Mallee UI
+# Mallee UI BETA
 
-This is a UI library for React written in TypeScript with CSS Modules.
+This is a UI library for React written with TypeScript and React and styled using CSS Modules.
 
-This library is still in development.
+The library and its documentation is still in development.
