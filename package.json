@@ -1,6 +1,6 @@
 {
   "name": "mallee-ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A UI library built with TypeScript, React and CSS Modules.",
   "type": "module",
   "main": "dist/index.cjs.js",
