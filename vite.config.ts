@@ -14,6 +14,7 @@ export default defineConfig({
   },
   build: {
     sourcemap: true,
+    emptyOutDir: false,
     lib: {
       entry: "src/index.tsx",
       name: "mallee-ui",
