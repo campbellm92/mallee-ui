@@ -8,8 +8,14 @@
   --secondary-hover: rgba(140, 66, 70, 0.9);
   --tertiary: #468c42;
   --tertiary-hover: rgba(70, 140, 66, 0.9);
+  /* tailwind neutral 200 */
   --neutral: rgb(229, 229, 229);
   --neutral-hover: rgb(229, 229, 229, 0.9);
+  /* tailwind neutral 500 */
+  --neutral-darker: rgb(115, 115, 115);
+  --neutral-darker-hover: rgb(115, 115, 115, 0.9);
+  /* tailwind neutral 800 */
+  --neutral-darkest: rgb(38, 38, 38);
   --text-primary: #f3f4f6;
   --text-secondary: #111827;
   --bg-dark: #111827;
