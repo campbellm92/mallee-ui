@@ -5,12 +5,14 @@ type CardProps = ComponentProps<"div"> & {
   variant?: "filled" | "outline" | "with-image" | "wide";
   color?: "primary" | "secondary" | "tertiary";
   image?: React.ReactNode;
+  enableHoverEffect?: boolean;
 };
 
 export const Card = ({
   variant = "filled",
   color = "primary",
   image,
+  enableHoverEffect = true,
   children,
   ...props
 }: CardProps) => {
@@ -18,6 +20,7 @@ export const Card = ({
     styles.card,
     styles[`card-${variant}`],
     styles[`card-${color}`],
+    enableHoverEffect && styles["card-hover-enabled"],
     props.className,
   ]
     .filter(Boolean)
