@@ -10,7 +10,8 @@
     ".": {
       "import": "./dist/index.es.js",
       "require": "./dist/index.cjs.js"
-    }
+    },
+    "./global.css": "./dist/global.css"
   },
   "files": [
     "dist/**/*",
