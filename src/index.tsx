@@ -1,4 +1,5 @@
-import "./styles/global.css";
+// test remove the following so that consumer projects rely only on bundled global.css file
+// import "./styles/global.css";
 
 //components
 export { Button } from "./components/Button";
