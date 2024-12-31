@@ -48,5 +48,5 @@
 }
 
 .navbar-with-branding-sticky-fade.scrolled {
-  background-color: rgba(66, 70, 140, 0.9);
+  background-color: var(--primary-hover);
 }
