@@ -32,17 +32,17 @@
 }
 
 .cardContent {
-  text-align: justify;
+  text-align: left;
   padding: 0.5rem 2rem;
   margin-top: 0;
 }
 
 /* Filled cards */
 .card-filled {
-  width: 300px;
-  max-width: 400px;
+  width: 18.75rem;
+  max-width: 25rem;
   height: auto;
-  min-height: 400px;
+  min-height: 25rem;
 }
 
 .card-filled.card-primary {
@@ -62,10 +62,10 @@
 
 /* Outline cards */
 .card-outline {
-  width: 300px;
-  max-width: 400px;
+  width: 18.75rem;
+  max-width: 25rem;
   height: auto;
-  min-height: 400px;
+  min-height: 25rem;
 }
 
 .card-outline.card-primary {
@@ -88,9 +88,9 @@
 
 /* Wide cards */
 .card-wide {
-  width: 400px;
+  width: 25rem;
   height: auto;
-  min-height: 150px;
+  min-height: 9.375rem;
 }
 
 .card-wide.card-primary {
@@ -114,6 +114,7 @@
   flex-direction: column;
   border: 3px solid var(--primary);
   color: var(--text-secondary);
+  width: 18.75rem;
 }
 
 .cardImageContainer {
