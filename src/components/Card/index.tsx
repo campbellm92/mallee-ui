@@ -2,7 +2,13 @@ import { ComponentProps } from "react";
 import styles from "./styles.module.css";
 
 type CardProps = ComponentProps<"div"> & {
-  variant?: "filled" | "outline" | "with-image" | "wide";
+  variant?:
+    | "filled"
+    | "outline"
+    | "wide"
+    | "with-image"
+    | "with-image-transition";
+
   color?: "primary" | "secondary" | "tertiary";
   image?: React.ReactNode;
   enableHoverEffect?: boolean;
@@ -25,6 +31,15 @@ export const Card = ({
   ]
     .filter(Boolean)
     .join(" ");
+
+  if (variant === "with-image-transition") {
+    return (
+      <div {...props} className={className}>
+        {image && <div className={styles.cardImageContainerFull}>{image}</div>}
+        <div className={styles.contentOverImage}>{children}</div>
+      </div>
+    );
+  }
 
   return (
     <div {...props} className={className}>
