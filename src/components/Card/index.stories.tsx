@@ -19,7 +19,13 @@ const meta: Meta<typeof Card> = {
   },
   argTypes: {
     variant: {
-      options: ["filled", "outline", "with-image"],
+      options: [
+        "filled",
+        "outline",
+        "wide",
+        "with-image",
+        "with-image-transition",
+      ],
       control: { type: "select" },
       description: "Defines the style variant of the card.",
     },
@@ -144,9 +150,7 @@ export const WidthCards: Story = {
               )} Card`}</h2>
             </Card.Title>
             <Card.Content>
-              <p>
-                <p>This is a {color} filled width card.</p>
-              </p>
+              <p>This is a {color} filled width card. </p>
             </Card.Content>
           </Card>
         ))}
@@ -165,9 +169,32 @@ export const WithImage = {
           <h2>Card Title</h2>
         </Card.Title>
         <Card.Content>
-          <p> This is basic card content. Add more details here.</p>
+          <p>This is basic card content. Add more details here.</p>
         </Card.Content>
       </>
     ),
+  },
+};
+
+export const WithImageTransition = {
+  render: () => {
+    return (
+      <>
+        <Card
+          variant="with-image-transition"
+          image={<img src="playground/Localis.png" alt="localis" />}
+        >
+          <Card.Title>
+            <h3>Localis</h3>
+          </Card.Title>
+          <Card.Content>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
+              explicabo doloremque cumque animi vero quasi architecto
+            </p>
+          </Card.Content>
+        </Card>
+      </>
+    );
   },
 };
