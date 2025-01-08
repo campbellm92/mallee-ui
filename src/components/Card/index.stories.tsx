@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "./index";
-// import { Button } from "../Button/index";
+import { Button } from "../Button/index";
 import { Meta, StoryObj } from "@storybook/react";
 import ParrotImage from "../../assets/parrot.jpg";
 
