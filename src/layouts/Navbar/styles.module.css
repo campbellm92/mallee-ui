@@ -17,13 +17,13 @@
 
 .navbar li a {
   text-decoration: none;
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-weight: 600;
 }
 
 .navbar .logo {
   margin-right: 1rem;
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-weight: 800;
 }
 
