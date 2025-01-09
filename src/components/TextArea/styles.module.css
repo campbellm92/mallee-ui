@@ -1,0 +1,47 @@
+.textArea {
+  width: 100%;
+  min-width: 20rem;
+  max-width: 30rem;
+  height: 8rem;
+  transition: border 0.3s ease;
+  border-radius: 0.25rem;
+  padding: 0.625rem;
+  outline: none;
+  font-size: 1.125rem;
+}
+
+.textArea.textArea-primary {
+  border: 0.125rem solid var(--primary);
+}
+
+.textArea.textArea-primary:focus {
+  border-color: var(--primary);
+  box-shadow: 0.125rem 0.125rem var(--primary-hover);
+}
+
+.textArea.textArea-secondary {
+  border: 0.125rem solid var(--secondary);
+}
+
+.textArea.textArea-secondary:focus {
+  border-color: var(--secondary);
+  box-shadow: 0.125rem 0.125rem var(--secondary-hover);
+}
+
+.textArea.textArea-tertiary {
+  border: 0.125rem solid var(--tertiary);
+}
+
+.textArea.textArea-tertiary:focus {
+  border-color: var(--tertiary);
+  box-shadow: 0.125rem 0.125rem var(--tertiary-hover);
+}
+
+.textArea.textArea-neutral {
+  border: 0.125rem solid var(--neutral);
+}
+
+.textArea.textArea-neutral:focus {
+  border-color: var(--neutral);
+  box-shadow: 0.125rem 0.125rem var(--neutral-hover);
+}
