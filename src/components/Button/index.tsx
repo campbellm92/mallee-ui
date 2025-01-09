@@ -13,6 +13,7 @@ type ButtonProps = ComponentProps<"button"> & {
     | "primary"
     | "secondary"
     | "tertiary"
+    | "neutral"
     | "info"
     | "success"
     | "warning"
