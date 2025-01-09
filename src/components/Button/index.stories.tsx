@@ -17,7 +17,7 @@ const meta: Meta<typeof Button> = {
     },
     color: {
       control: { type: "select" },
-      options: ["primary", "secondary", "tertiary"],
+      options: ["primary", "secondary", "tertiary", "neutral"],
     },
     size: {
       control: { type: "select" },
@@ -47,7 +47,7 @@ export const FilledButtons: Story = {
     size: "medium",
   },
   render: (args) => {
-    const colors = ["primary", "secondary", "tertiary"] as const;
+    const colors = ["primary", "secondary", "tertiary", "neutral"] as const;
     return (
       <div style={{ display: "flex", gap: "1rem" }}>
         {colors.map((color) => (
@@ -65,7 +65,7 @@ export const OutlineButtons: Story = {
     size: "medium",
   },
   render: (args) => {
-    const colors = ["primary", "secondary", "tertiary"] as const;
+    const colors = ["primary", "secondary", "tertiary", "neutral"] as const;
     return (
       <div style={{ display: "flex", gap: "1rem" }}>
         {colors.map((color) => (
