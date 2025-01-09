@@ -1,7 +1,7 @@
 .badge {
   width: auto;
   height: 1rem;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.125rem;
@@ -13,42 +13,45 @@
 /* Filled badges  */
 .badge.badge-filled.badge-primary {
   background-color: var(--primary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .badge.badge-filled.badge-secondary {
   background-color: var(--secondary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .badge.badge-filled.badge-tertiary {
   background-color: var(--tertiary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .badge.badge-filled.badge-neutral {
   background-color: var(--neutral);
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 /* Outline badges  */
 .badge.badge-outline.badge-primary {
   border: 0.125rem solid var(--primary);
-  color: var(--text-secondary);
+  background-color: inherit;
+  /* color: var(--text-secondary); */
 }
 
 .badge.badge-outline.badge-secondary {
   border: 0.125rem solid var(--secondary);
   background-color: inherit;
-  color: var(--text-primary);
+  /* color: var(--text-primary); */
 }
 
 .badge.badge-outline.badge-tertiary {
   border: 0.125rem solid var(--tertiary);
-  color: var(--text-secondary);
+  background-color: inherit;
+  /* color: var(--text-secondary); */
 }
 
 .badge.badge-outline.badge-neutral {
   border: 0.125rem solid var(--neutral);
-  color: var(--text-secondary);
+  background-color: inherit;
+  /* color: var(--text-secondary); */
 }

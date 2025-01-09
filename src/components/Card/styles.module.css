@@ -36,17 +36,17 @@
 
 .card-filled.card-primary {
   background-color: var(--primary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .card-filled.card-secondary {
   background-color: var(--secondary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .card-filled.card-tertiary {
   background-color: var(--tertiary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 /* Outline cards */
@@ -60,19 +60,19 @@
 .card-outline.card-primary {
   background-color: transparent;
   border: 3px solid var(--primary);
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .card-outline.card-secondary {
   background-color: transparent;
   border: 3px solid var(--secondary);
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .card-outline.card-tertiary {
   background-color: transparent;
   border: 3px solid var(--tertiary);
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 /* Wide cards */
@@ -84,17 +84,17 @@
 
 .card-wide.card-primary {
   background-color: var(--primary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .card-wide.card-secondary {
   background-color: var(--secondary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .card-wide.card-tertiary {
   background-color: var(--tertiary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 /* Image cards */
@@ -103,7 +103,7 @@
   flex-direction: column;
   border: 3px solid var(--primary);
   background-color: var(--primary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
   width: 18.75rem;
 }
 
@@ -130,6 +130,10 @@
   border: 3px solid var(--primary);
   overflow: hidden;
   position: relative;
+}
+
+.card-with-image-transition:active {
+  transform: translate(2rem, -2rem);
 }
 
 .cardImageContainerFull {
@@ -165,7 +169,7 @@
   transition: opacity 1s ease, transform 1s ease;
   position: absolute;
   background-color: var(--primary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
   opacity: 0;
   z-index: 2;
 }
@@ -177,6 +181,7 @@
 .card-with-image-transition:hover .contentOverImage {
   opacity: 1;
   transform: translateY(0);
+  cursor: pointer;
 }
 
 /* Devices */

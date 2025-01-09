@@ -28,14 +28,15 @@ export const Popover = ({
     .filter(Boolean) // remove any undefined or falsy values
     .join(" ");
 
+  // may require adjusting for dark mode:
   const adjustCloseButtonColor = (popoverColor: string) => {
     switch (popoverColor) {
       case "primary":
       case "secondary":
       case "tertiary":
-        return "var(--text-primary)";
-      case "neutral":
         return "var(--text-secondary)";
+      case "neutral":
+        return "var(--text-primary)";
     }
   };
 

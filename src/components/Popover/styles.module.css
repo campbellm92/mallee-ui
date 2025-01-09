@@ -20,28 +20,28 @@
 
 .popover-basic.popover-primary {
   background-color: var(--primary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
   min-width: 300px;
   min-height: 150px;
 }
 
 .popover-basic.popover-secondary {
   background-color: var(--secondary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
   min-width: 300px;
   min-height: 150px;
 }
 
 .popover-basic.popover-tertiary {
   background-color: var(--tertiary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
   min-width: 300px;
   min-height: 150px;
 }
 
 .popover-basic.popover-neutral {
   background-color: var(--neutral);
-  color: var(--text-secondary);
+  color: var(--text-primary);
   min-width: 300px;
   min-height: 150px;
 }

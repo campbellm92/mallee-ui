@@ -2,31 +2,30 @@
 
 :root {
   /* Colour */
-  --primary: #42468c;
+  --primary: rgb(66, 70, 140);
   --primary-hover: rgba(66, 70, 140, 0.9);
-  --secondary: #8c4246;
+  --secondary: rgb(140, 66, 70);
   --secondary-hover: rgba(140, 66, 70, 0.9);
-  --tertiary: #468c42;
+  --tertiary: rgb(70, 140, 66);
   --tertiary-hover: rgba(70, 140, 66, 0.9);
   /* tailwind neutral 200 */
   --neutral: rgb(229, 229, 229);
-  --neutral-hover: rgb(229, 229, 229, 0.9);
+  --neutral-hover: rgba(229, 229, 229, 0.9);
   /* tailwind neutral 500 */
   --neutral-darker: rgb(115, 115, 115);
-  --neutral-darker-hover: rgb(115, 115, 115, 0.9);
+  --neutral-darker-hover: rgba(115, 115, 115, 0.9);
   /* tailwind neutral 800 */
   --neutral-darkest: rgb(38, 38, 38);
-  --text-primary: #f3f4f6;
-  --text-secondary: #111827;
-  --bg-dark: #111827;
-  --bg-light: #f3f4f6;
-  --info: #0ea5e9;
+  --text-primary: rgb(17, 24, 39);
+  --text-secondary: rgb(243, 244, 246);
+  --background: rgb(243, 244, 246);
+  --info: rgb(14, 165, 233);
   --info-hover: rgba(14, 165, 233, 0.9);
-  --success: #10b981;
+  --success: rgb(16, 185, 129);
   --success-hover: rgba(16, 185, 129, 0.9);
-  --warning: #eab308;
+  --warning: rgb(234, 179, 8);
   --warning-hover: rgba(234, 179, 8, 0.9);
-  --error: #f43f5e;
+  --error: rgb(244, 63, 94);
   --error-hover: rgba(244, 63, 94, 0.9);
 
   /* Typography */
@@ -44,7 +43,34 @@
   --font-size-small: 0.875rem; /* 14px */
 }
 
-[data-theme="dark"] {
+/* Dark mode colours */
+
+.dark-theme {
+  --primary: rgb(66, 70, 140);
+  --primary-hover: rgba(66, 70, 140, 0.9);
+  --secondary: rgb(140, 66, 70);
+  --secondary-hover: rgba(140, 66, 70, 0.9);
+  --tertiary: rgb(70, 140, 66);
+  --tertiary-hover: rgba(70, 140, 66, 0.9);
+  /* tailwind neutral 200 */
+  --neutral: rgb(229, 229, 229);
+  --neutral-hover: rgba(229, 229, 229, 0.9);
+  /* tailwind neutral 500 */
+  --neutral-darker: rgb(115, 115, 115);
+  --neutral-darker-hover: rgba(115, 115, 115, 0.9);
+  /* tailwind neutral 800 */
+  --neutral-darkest: rgb(38, 38, 38);
+  --text-primary: rgb(243, 244, 246);
+  --text-secondary: rgb(17, 24, 39);
+  --background: rgb(17, 24, 39);
+  --info: rgb(14, 165, 233);
+  --info-hover: rgba(14, 165, 233, 0.9);
+  --success: rgb(16, 185, 129);
+  --success-hover: rgba(16, 185, 129, 0.9);
+  --warning: rgb(234, 179, 8);
+  --warning-hover: rgba(234, 179, 8, 0.9);
+  --error: rgb(244, 63, 94);
+  --error-hover: rgba(244, 63, 94, 0.9);
 }
 
 html {

@@ -13,6 +13,10 @@
   transform: scale(1.03);
 }
 
+.button:active {
+  transform: translate(1rem, -1rem);
+}
+
 /* Fill buttons */
 .button-filled {
   border: none;
@@ -20,32 +24,32 @@
 
 .button-filled.button-primary {
   background-color: var(--primary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-filled.button-primary:hover {
   background-color: var(--primary-hover);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-filled.button-secondary {
   background-color: var(--secondary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-filled.button-secondary:hover {
   background-color: var(--secondary-hover);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-filled.button-tertiary {
   background-color: var(--tertiary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-filled.button-tertiary:hover {
   background-color: var(--tertiary-hover);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 /* Outline buttons */
@@ -61,7 +65,7 @@
 
 .button-outline.button-primary:hover {
   background-color: var(--primary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-outline.button-secondary {
@@ -71,7 +75,7 @@
 
 .button-outline.button-secondary:hover {
   background-color: var(--secondary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-outline.button-tertiary {
@@ -81,49 +85,49 @@
 
 .button-outline.button-tertiary:hover {
   background-color: var(--tertiary);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 /* State buttons */
 
 .button-filled.button-info {
   background-color: var(--info);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-filled.button-info:hover {
   background-color: var(--info-hover);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-filled.button-success {
   background-color: var(--success);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-filled.button-success:hover {
   background-color: var(--success-hover);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-filled.button-warning {
   background-color: var(--warning);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-filled.button-warning:hover {
   background-color: var(--warning-hover);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-filled.button-error {
   background-color: var(--error);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .button-filled.button-error:hover {
   background-color: var(--error-hover);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 /* Sizes */
