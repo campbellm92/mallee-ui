@@ -52,6 +52,16 @@
   color: var(--text-secondary);
 }
 
+.button-filled.button-neutral {
+  background-color: var(--neutral);
+  color: var(--text-primary);
+}
+
+.button-filled.button-neutral:hover {
+  background-color: var(--neutral-hover);
+  color: var(--text-primary);
+}
+
 /* Outline buttons */
 .button-outline {
   background-color: inherit;
@@ -86,6 +96,16 @@
 .button-outline.button-tertiary:hover {
   background-color: var(--tertiary);
   color: var(--text-secondary);
+}
+
+.button-outline.button-neutral {
+  color: var(--text-primary);
+  border-color: var(--neutral);
+}
+
+.button-outline.button-neutral:hover {
+  color: var(--text-primary);
+  background-color: var(--neutral);
 }
 
 /* State buttons */
