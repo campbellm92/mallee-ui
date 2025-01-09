@@ -1,22 +1,32 @@
 import { ComponentProps } from "react";
 import styles from "./styles.module.css";
 
-type TextAreaProps = ComponentProps<"div"> & {
+type TextAreaProps = ComponentProps<"textarea"> & {
   variant?: "basic";
+  color?:
+    | "primary"
+    | "secondary"
+    | "tertiary"
+    | "neutral"
+    | "info"
+    | "success"
+    | "warning"
+    | "error";
 };
 
 export const TextArea = ({
   variant = "basic",
-
+  color = "primary",
   ...props
 }: TextAreaProps) => {
   const className = [
-    styles.div,
-    styles[`div-${variant}`],
-    props.className, // allow additional custom classes
+    styles.textArea,
+    styles[`textArea-${variant}`],
+    styles[`textArea-${color}`],
+    props.className,
   ]
-    .filter(Boolean) // remove any undefined or falsy values
+    .filter(Boolean)
     .join(" ");
 
-  return <div {...props} className={className}></div>;
+  return <textarea {...props} className={className}></textarea>;
 };
