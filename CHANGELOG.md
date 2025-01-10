@@ -2,6 +2,12 @@
 
 All noteworthy changes will be documented in this file.
 
+## [0.1.1] - 10-01-2025
+
+### Fixed
+
+- Cards responsiveness issues
+
 ## [0.1.0] - 09-01-2025
 
 ### Added
