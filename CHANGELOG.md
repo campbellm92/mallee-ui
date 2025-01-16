@@ -2,6 +2,12 @@
 
 All noteworthy changes will be documented in this file.
 
+## [0.1.5] - 16-01-2025
+
+### Fixed
+
+- TextInput and TextArea width issue
+
 ## [0.1.4] - 16-01-2025
 
 ### Added
