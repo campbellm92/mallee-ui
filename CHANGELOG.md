@@ -2,6 +2,12 @@
 
 All noteworthy changes will be documented in this file.
 
+## [0.1.4] - 16-01-2025
+
+### Added
+
+- Placeholder and label to text area component
+
 ## [0.1.3] - 16-01-2025
 
 ### Fixed
