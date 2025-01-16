@@ -12,11 +12,17 @@ type TextAreaProps = ComponentProps<"textarea"> & {
     | "success"
     | "warning"
     | "error";
+  label: string;
+  name: string;
+  placeholder: string;
 };
 
 export const TextArea = ({
   variant = "basic",
   color = "primary",
+  label,
+  name,
+  placeholder = name,
   ...props
 }: TextAreaProps) => {
   const className = [
@@ -28,5 +34,20 @@ export const TextArea = ({
     .filter(Boolean)
     .join(" ");
 
-  return <textarea {...props} className={className}></textarea>;
+  return (
+    <div className={styles.textAreaContainer}>
+      {label && (
+        <label htmlFor={name} className={styles.label}>
+          {label}
+        </label>
+      )}
+      <textarea
+        className={className}
+        id={name}
+        name={name}
+        placeholder={placeholder}
+        {...props}
+      ></textarea>
+    </div>
+  );
 };
