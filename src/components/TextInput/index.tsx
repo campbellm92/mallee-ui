@@ -28,7 +28,11 @@ export const TextInput = ({
 
   return (
     <div className={styles.inputContainer}>
-      {label && <label htmlFor={name}>{label}</label>}
+      {label && (
+        <label htmlFor={name} className={styles.label}>
+          {label}
+        </label>
+      )}
       <input
         className={className}
         id={name}
