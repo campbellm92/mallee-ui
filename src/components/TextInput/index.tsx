@@ -7,6 +7,12 @@ type TextInputProps = ComponentProps<"input"> & {
   label: string;
   name: string;
   placeholder: string;
+  hasWarning?: boolean;
+  warningMessage?: string;
+  hasError?: boolean;
+  errorMessage?: string;
+  hasSuccess?: boolean;
+  successMessage?: string;
 };
 
 export const TextInput = ({
@@ -15,12 +21,21 @@ export const TextInput = ({
   label,
   name,
   placeholder = name,
+  hasWarning = false,
+  warningMessage,
+  hasError = false,
+  errorMessage,
+  hasSuccess = false,
+  successMessage,
   ...props
 }: TextInputProps) => {
   const className = [
     styles.input,
     styles[`input-${variant}`],
     styles[`input-${color}`],
+    hasWarning && styles["input-warning"],
+    hasError && styles["input-error"],
+    hasSuccess && styles["input-success"],
     props.className,
   ]
     .filter(Boolean)
@@ -39,6 +54,15 @@ export const TextInput = ({
         placeholder={placeholder}
         {...props}
       />
+      {hasWarning && warningMessage && (
+        <span className={styles.warningMessage}>{warningMessage}</span>
+      )}
+      {hasError && errorMessage && (
+        <span className={styles.errorMessage}>{errorMessage}</span>
+      )}
+      {hasSuccess && successMessage && (
+        <span className={styles.successMessage}>{successMessage}</span>
+      )}
     </div>
   );
 };

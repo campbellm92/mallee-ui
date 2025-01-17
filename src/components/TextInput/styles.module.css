@@ -8,6 +8,7 @@
 
 .label {
   font-size: 1.125rem;
+  font-weight: 500;
   color: var(--text-primary);
 }
 
@@ -66,4 +67,50 @@
 .input.input-neutral:focus {
   border-color: var(--neutral-darker);
   box-shadow: 0.125rem 0.125rem var(--neutral-darker-hover);
+}
+
+/* States */
+
+.input.input-warning {
+  border-color: var(--warning);
+}
+
+.input.input-warning:focus {
+  border-color: var(--warning);
+  box-shadow: 0.125rem 0.125rem var(--warning-hover);
+}
+
+.input.input-error {
+  border-color: var(--error);
+}
+
+.input.input-error:focus {
+  border-color: var(--error);
+  box-shadow: 0.125rem 0.125rem var(--error-hover);
+}
+
+.input.input-success {
+  border-color: var(--success);
+}
+
+.input.input-success:focus {
+  border-color: var(--success);
+  box-shadow: 0.125rem 0.125rem var(--success-hover);
+}
+
+/* State messages */
+
+.warningMessage {
+  color: var(--warning);
+  font-weight: 500;
+}
+
+.errorMessage {
+  color: var(--error);
+  font-weight: 500;
+}
+
+.successMessage {
+  color: var(--success);
+  font-weight: 500;
 }

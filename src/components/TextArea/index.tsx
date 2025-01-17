@@ -15,6 +15,12 @@ type TextAreaProps = ComponentProps<"textarea"> & {
   label: string;
   name: string;
   placeholder: string;
+  hasWarning?: boolean;
+  warningMessage?: string;
+  hasError?: boolean;
+  errorMessage?: string;
+  hasSuccess?: boolean;
+  successMessage?: string;
 };
 
 export const TextArea = ({
@@ -23,12 +29,21 @@ export const TextArea = ({
   label,
   name,
   placeholder = name,
+  hasWarning = false,
+  warningMessage,
+  hasError = false,
+  errorMessage,
+  hasSuccess = false,
+  successMessage,
   ...props
 }: TextAreaProps) => {
   const className = [
     styles.textArea,
     styles[`textArea-${variant}`],
     styles[`textArea-${color}`],
+    hasWarning && styles["textArea-warning"],
+    hasError && styles["textArea-error"],
+    hasSuccess && styles["textArea-success"],
     props.className,
   ]
     .filter(Boolean)
@@ -48,6 +63,15 @@ export const TextArea = ({
         placeholder={placeholder}
         {...props}
       ></textarea>
+      {hasWarning && warningMessage && (
+        <span className={styles.warningMessage}>{warningMessage}</span>
+      )}
+      {hasError && errorMessage && (
+        <span className={styles.errorMessage}>{errorMessage}</span>
+      )}
+      {hasSuccess && successMessage && (
+        <span className={styles.successMessage}>{successMessage}</span>
+      )}
     </div>
   );
 };
