@@ -2,6 +2,12 @@
 
 All noteworthy changes will be documented in this file.
 
+## [0.1.6] - 16-01-2025
+
+### Added
+
+- Warning, error and success states to TextInput and TextArea components
+
 ## [0.1.5] - 16-01-2025
 
 ### Fixed
