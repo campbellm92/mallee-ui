@@ -9,7 +9,7 @@ type CardProps = ComponentProps<"div"> & {
     | "with-image"
     | "with-image-transition";
 
-  color?: "primary" | "secondary" | "tertiary";
+  color?: "primary" | "secondary" | "tertiary" | "neutral";
   image?: React.ReactNode;
   enableHoverEffect?: boolean;
 };
