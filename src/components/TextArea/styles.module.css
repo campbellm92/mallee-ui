@@ -14,7 +14,6 @@
 
 .textArea {
   width: 100%;
-  min-width: 20rem;
   max-width: 30rem;
   height: 8rem;
   transition: border 0.3s ease;
