@@ -2,7 +2,13 @@
 
 All noteworthy changes will be documented in this file.
 
-## [0.1.7] - 16-01-2025
+## [0.1.8] - 18-01-2025
+
+### Fixed
+
+- Min-width removed from text input component
+
+## [0.1.7] - 18-01-2025
 
 ### Fixed
 
