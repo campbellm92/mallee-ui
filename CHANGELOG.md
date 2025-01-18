@@ -2,6 +2,16 @@
 
 All noteworthy changes will be documented in this file.
 
+## [0.1.7] - 16-01-2025
+
+### Fixed
+
+- Card spacing issues on smaller devices
+
+### Added
+
+- Neutral card color variant
+
 ## [0.1.6] - 16-01-2025
 
 ### Added
