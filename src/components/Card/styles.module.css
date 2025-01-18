@@ -16,16 +16,18 @@
 
 .cardTitle {
   font-weight: 700;
-  padding-top: 1rem;
+  padding: 1rem 1rem 0.5rem 1rem;
+  text-align: center;
   /* font-size: 2rem; */
   font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .cardContent {
   text-align: center;
-  padding: 0.5rem 1rem;
-  margin-top: 0;
-  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  padding: 0.5rem 1rem 1.5rem 1rem;
+
+  /* font-size: clamp(0.875rem, 2.5vw, 1rem); */
+  font-size: 1rem;
 }
 
 /* Filled cards */
@@ -51,6 +53,11 @@
   color: var(--text-secondary);
 }
 
+.card-filled.card-neutral {
+  background-color: var(--neutral);
+  color: var(--text-primary);
+}
+
 /* Outline cards */
 .card-outline {
   width: 18.75rem;
@@ -74,6 +81,12 @@
 .card-outline.card-tertiary {
   background-color: transparent;
   border: 3px solid var(--tertiary);
+  color: var(--text-primary);
+}
+
+.card-outline.card-neutral {
+  background-color: transparent;
+  border: 3px solid var(--neutral);
   color: var(--text-primary);
 }
 
@@ -191,7 +204,6 @@
 /* Devices */
 
 @media (max-width: 768px) {
-  /* Let the card fill its container (or near full width) on mobile */
   .card-filled,
   .card-outline,
   .card-wide,
@@ -200,6 +212,14 @@
     width: 90%;
     /* max-width: 28rem;  */
     min-height: auto;
+  }
+
+  .cardTitle {
+    padding: 2rem 1rem 0.5rem 1rem;
+  }
+
+  .cardContent {
+    padding: 0.5rem 1rem 1.5rem 1rem;
   }
 }
 
