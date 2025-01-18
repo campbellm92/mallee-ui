@@ -31,7 +31,7 @@ const meta: Meta<typeof Card> = {
     },
     color: {
       control: { type: "select" },
-      options: ["primary", "secondary", "tertiary"],
+      options: ["primary", "secondary", "tertiary", "neutral"],
     },
     image: {
       control: { type: "text" },
@@ -79,7 +79,7 @@ export const Default: Story = {
 
 export const FilledCards: Story = {
   render: () => {
-    const colors = ["primary", "secondary", "tertiary"] as const;
+    const colors = ["primary", "secondary", "tertiary", "neutral"] as const;
     return (
       <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
         {colors.map((color) => (
