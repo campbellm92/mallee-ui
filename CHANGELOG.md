@@ -2,6 +2,16 @@
 
 All noteworthy changes will be documented in this file.
 
+## [0.2.0] - 22.02.2025
+
+### Added
+
+- ability to add icons to navbar
+
+## [0.1.9] - 18-01-2025
+
+- undocumented minor fixes
+
 ## [0.1.8] - 18-01-2025
 
 ### Fixed
