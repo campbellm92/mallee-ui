@@ -22,6 +22,14 @@
   font-weight: 600;
 }
 
+.navbar .icons {
+  color: var(--text-secondary);
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+
+}
+
 .navbar .logo {
   margin-right: 1rem;
   color: var(--text-secondary);
