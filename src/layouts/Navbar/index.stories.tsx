@@ -1,5 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Navbar } from "./index";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
+import React from "react";
 
 const meta: Meta<typeof Navbar> = {
   title: "Layouts/Navbar",
@@ -25,6 +27,10 @@ const meta: Meta<typeof Navbar> = {
       control: { type: "text" },
       description: "A logo or branding element.",
     },
+    icons: {
+      control: { type: "object" },
+      description: "An array of icons, like SVG buttons."
+    }
   },
 };
 
@@ -84,8 +90,10 @@ export const WithBrandingStickyFade: Story = {
     logo: "BRAND",
     navItems: [
       { label: "Services", href: "/services" },
-      { label: "Contact", href: "/contact" },
     ],
+    icons: [
+      <MoonIcon />
+    ]
   },
   decorators: [
     (Story) => (
