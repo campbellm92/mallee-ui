@@ -204,6 +204,7 @@
 /* Devices */
 
 @media (max-width: 768px) {
+
   .card-filled,
   .card-outline,
   .card-wide,
@@ -223,5 +224,4 @@
   }
 }
 
-@media (min-width: 1024px) {
-}
+@media (min-width: 1024px) {}
