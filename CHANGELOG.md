@@ -2,6 +2,12 @@
 
 All noteworthy changes will be documented in this file.
 
+## [0.2.1] - 22.02.2025
+
+### Fixed
+
+- build forgotten from previous version
+
 ## [0.2.0] - 22.02.2025
 
 ### Added
