@@ -8,18 +8,20 @@ type NavItem = {
 
 type NavbarProps = ComponentProps<"nav"> & {
   variant?:
-    | "basic"
-    | "with-branding"
-    | "with-branding-sticky"
-    | "with-branding-sticky-fade";
+  | "basic"
+  | "with-branding"
+  | "with-branding-sticky"
+  | "with-branding-sticky-fade";
   navItems?: NavItem[];
   logo?: React.ReactNode;
+  icons?: React.ReactNode[];
 };
 
 export const Navbar = ({
   variant = "basic",
   navItems = [],
   logo,
+  icons = [],
   ...props
 }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
@@ -52,6 +54,13 @@ export const Navbar = ({
           </li>
         ))}
       </ul>
+      {icons.length > 0 && (
+        <div className={styles.icons}>
+          {icons.map((icon, index) => (
+            <div key={index}>{icon}</div>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };
