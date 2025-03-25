@@ -5,7 +5,7 @@ import { ReactComponent as MalleeLogo } from "../../assets/logo.svg";
 import { ReactComponent as GithubLogo } from "../../assets/github-mark.svg";
 
 const meta: Meta<typeof Footer> = {
-  title: "Layouts/Footer",
+  title: "Components/Footer",
   component: Footer,
   parameters: {},
   tags: ["autodocs"],

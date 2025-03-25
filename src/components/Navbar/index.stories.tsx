@@ -4,7 +4,7 @@ import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 import React from "react";
 
 const meta: Meta<typeof Navbar> = {
-  title: "Layouts/Navbar",
+  title: "Components/Navbar",
   component: Navbar,
   parameters: {},
   tags: ["autodocs"],
